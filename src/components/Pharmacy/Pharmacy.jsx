@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MedCard } from "./MedCard";
 import { HealthConditions } from "./HealthCondition";
+import axios from "axios";
 
 let styleAtag = {
   color: "#81a4ae",
@@ -64,6 +64,56 @@ const obj = {
     "https://newassets.apollo247.com/pub/media/healtharea/247images/a/d/adult.png",
 };
 
+
+const medName = [
+  "COVID Care",
+  "COVID Protrction",
+  "Dabetes Care",
+  "Mind Care",
+  "Liver Care",
+  "Cardiac",
+  "Pain Relief",
+  "Oral Care",
+  "Respiratory",
+  "Cold & Immunity",
+  "Stomach Care",
+  "Sexual Health",
+  "Eye and Ear Care",
+  "Elderly Care",
+];
+const medObj = {
+  COVID_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  COVID_Protrction:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/c/o/coronavirus_protection_1.png",
+  Dabetes_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_diabetes.png",
+  Mind_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/m/i/mind_care.jpg",
+  Liver_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/l/i/liver_care.jpg",
+  Cardiac:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_heart.png",
+  Pain_Relief:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_arthritis.png",
+  Oral_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/o/r/oral_care_2.png",
+  Respiratory:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_lungs.png",
+  Cold_and_Immunity:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/c/o/cold_and_immunity_21oct.png",
+  Stomach_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_stomach.png",
+  Sexual_Health:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_condom.png",
+  Eye_and_Ear_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_eyeear.png",
+  Elderly_Care:
+    "https://newassets.apollo247.com/pub/media/healtharea/247images/a/d/adult.png",
+};
+
+
+
 const Main = styled.div`
   display: flex;
   justify-content: center;
@@ -77,8 +127,15 @@ const Second = styled.div`
   gap: 25px;
 `;
 
-
 export default function Pharmacy() {
+  const [data, setData] = useState();
+  useEffect(() => {
+    axios.get("http://localhost:8080/healthConditions").then((res) => {
+      setData(res.data);
+      console.log(data);
+    });
+  }, []);
+
   return (
     <div
       style={{
@@ -215,6 +272,7 @@ export default function Pharmacy() {
           </div>
         </div>
         <hr />
+        {/* ------------------------------------------------------ */}
         <div>
           <div style={{ display: "flex", gap: "0px" }}>
             <Swiper
@@ -300,31 +358,96 @@ export default function Pharmacy() {
             </Swiper>
           </div>
         </div>
-        {/* ----------------------------------------- */}
+        <hr></hr>
+        {/* ----------------------------------------------------------- */}
         <div>
-          <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            slidesPerView={3}
-            navigation
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            <Second>
+          <div style={{ display: "flex", gap: "0px" }}>
+            <Swiper
+              // install Swiper modules
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              spaceBetween={50}
+              slidesPerView={3}
+              navigation
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log("slide change")}
+            >
               {Object.keys(obj).map((item, i) => {
                 return (
-                  <HealthConditions
-                    key={i + 1}
-                    name={healthConditions[i]}
-                    imgURL={obj[item]}
-                  />
+                  <div style={{ marginLeft: "50px" }}>
+                    <SwiperSlide
+                      style={{
+                        flexShrink: "1",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          // padding: "5px",
+                          gap: "0px",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <a
+                          href="https://www.apollopharmacy.in/shop-by-health-conditions/respiratory"
+                          style={{
+                            textDecoration: "none",
+                            margin: "0",
+                          }}
+                        >
+                          <div
+                            style={{
+                              margin: "0",
+                              boxSizing: "border-box",
+                              boxShadow: "0 2px 4px 0 gray",
+                              borderRadius: "10px",
+                              padding: "14px 7px",
+                              display: "flex",
+                              // gap: "5px",
+                              alignItems: "center",
+                            }}
+                          >
+                            <img
+                              key={i}
+                              src={obj[item]}
+                              style={{
+                                width: "36px",
+                                aspectRatio: "auto 36 / 36",
+                                height: "36px",
+                                margin: "0",
+                                padding: "0",
+                                boxSizing: "border-box",
+                                marginRight: "12px",
+                              }}
+                              alt=""
+                            ></img>
+                            <p
+                              style={{
+                                margin: "0",
+                                fontWeight: "400",
+                                fontSize: "12px",
+                                fontFamily: "sans-serif",
+                                width: "80px",
+                                justifyContent: "center",
+                                textAlign: "left",
+                              }}
+                            >
+                              {healthConditions[i]}
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  </div>
                 );
               })}
               <br />
               <br />
-            </Second>
-          </Swiper>
+            </Swiper>
+          </div>
+        </div>
+
+        {/* ---------------------------------------------- */}
+        <div>
           <div
             style={{
               fontSize: "14px",

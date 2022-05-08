@@ -169,77 +169,6 @@ export default function Navbar() {
                 ></img>
               </a>
             </h1>
-            {/* <div
-              class="LocationSearch_locationContainer__1riv4 "
-              style={{
-                fontSize: "14px",
-                color: "#02475b",
-                boxSizing: "border-box",
-                padding: "0",
-                margin: "0",
-                position: "relative",
-              }}
-            >
-              <div
-                class="LocationSearch_location__zRG3b "
-                style={{
-                  fontSize: "14px",
-                  color: "#02475b",
-                  margin: "0",
-                  boxSizing: "border-box",
-                  borderBottom: "1px solid #00b38e",
-                  padding: "0 20px 2px 0",
-                  position: "relative",
-                  cursor: "pointer",
-                }}
-              >
-                <div
-                  class="LocationSearch_selectLocation__1f9af"
-                  style={{
-                    fontSize: "14px",
-                    color: "#02475b",
-                    margin: "0",
-                    padding: "0",
-                    boxSizing: "border-box",
-                    cursor: "pointer",
-                  }}
-                >
-                  <span
-                    class="LocationSearch_textEllipses__zqB4v LocationSearch_displayInlineBlk__19KIM"
-                    style={{
-                      color: "#02475b",
-                      cursor: "pointer",
-                      margin: "0",
-                      padding: "0",
-                      boxSizing: "border-box",
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      maxWidth: "120px",
-                      display: "inline-block",
-                      fontSize: "12px",
-                    }}
-                  >
-                    Hello,
-                  </span>
-                  <p
-                    class="MuiTypography-root MuiTypography-body1"
-                    style={{
-                      color: "#02475b",
-                      cursor: "pointer",
-                      padding: "0",
-                      boxSizing: "border-box",
-                      margin: "0",
-                      fontWeight: "400",
-                      lineHeight: "1.5",
-                      fontSize: "14px",
-                    }}
-                  >
-                    Select your location
-                  </p>
-                </div>
-              </div>
-            </div> */}
           </div>
           <div
             class="Header_menuContainer__1Q0Sd"
@@ -365,7 +294,7 @@ export default function Navbar() {
                 padding: "10px",
               }}
             >
-              <span
+              <img
                 class="icon-ic_cart"
                 style={{
                   color: "#02475b",
@@ -385,7 +314,8 @@ export default function Navbar() {
                   width: "24px",
                   height: "24px",
                 }}
-              ></span>
+                src="https://img.icons8.com/material-rounded/344/shopping-cart-loaded.png"
+              ></img>
               <span
                 class="Header_badge__8TidP"
                 style={{
@@ -411,7 +341,8 @@ export default function Navbar() {
                 0
               </span>
             </div>
-            <div
+            <a
+              href="/login"
               class="Header_userOptions__1o5ZI"
               style={{
                 fontSize: "14px",
@@ -434,7 +365,7 @@ export default function Navbar() {
                   display: "flex",
                   width: "48px",
                   height: "48px",
-                  background: "#02475b",
+                  background: "white",
                   borderRadius: "50%",
                   textAlign: "center",
                   cursor: "pointer",
@@ -442,10 +373,10 @@ export default function Navbar() {
                   justifyContent: "center",
                 }}
               >
-                <i
+                <img
                   class="icon-ic_account_white"
                   style={{
-                    color: "#02475b",
+                    color: "white",
                     textAlign: "center",
                     cursor: "pointer",
                     margin: "0",
@@ -460,10 +391,13 @@ export default function Navbar() {
                     fontSize: "24px",
                     lineHeight: "1",
                     webkitFontSmoothing: "antialiased",
+                    width: "100%",
+                    height: "100%",
                   }}
-                ></i>
+                  src="https://img.icons8.com/external-bearicons-glyph-bearicons/344/external-User-essential-collection-bearicons-glyph-bearicons.png"
+                ></img>
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>

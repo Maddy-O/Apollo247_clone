@@ -15,9 +15,13 @@ export const MedCard = ({ id, imageUrl, title, price }) => {
   return (
     <StyledLink to={`/phamacy`}>
       <div className="MedCard">
-        <img src={imageUrl} style={{ width: "250px" }} alt="#" />
-        <h2 className="title">{title}</h2>
-        <h4 className="price">{imageUrl}</h4>
+        <div>
+          <img src={imageUrl} style={{ width: "500px" }} alt="#" />
+        </div>
+        <div>
+          <h2 className="title">{title}</h2>
+        </div>
+        {/* <h4 className="price">{imageUrl}</h4> */}
       </div>
     </StyledLink>
   );

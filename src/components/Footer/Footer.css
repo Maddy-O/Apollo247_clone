@@ -1,0 +1,50 @@
+.foot{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding: 20px;
+    background-color: #020d11;
+}
+
+.foot ul{
+    padding: 20px;
+    background-color: #020d11;
+}
+
+.foot ul li{
+    padding: 0 8px;
+    text-align: center;
+    list-style-type: none;
+}
+.foot ul li a{
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    line-height: 27px;
+    padding-bottom: 11px;
+}
+
+.foot ul li a img{
+    max-width: 105px;
+    vertical-align: middle;
+}
+
+.fdiv{
+    width: 100%;
+    margin: 0 !important;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0 !important;
+    height: auto;
+    visibility: visible !important;
+}
+
+.fdiv a{
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    line-height: 27px;
+    text-decoration: none;
+    padding-left: 20px;
+}

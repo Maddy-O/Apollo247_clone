@@ -1,0 +1,74 @@
+{
+    "healthConditions": [
+        {
+            "name" : "COVID Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+            "id" : 0
+        },
+        {
+            "name" : "COVID Protrction",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/c/o/coronavirus_protection_1.png",
+            "id" : 1
+        },
+        {
+            "name" : "Dabetes Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_diabetes.png",
+            "id" : 2
+        },
+        {
+            "name" : "Mind Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/m/i/mind_care.jpg",
+            "id" : 3
+        },
+        {
+            "name" : "Liver Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/l/i/liver_care.jpg",
+            "id" : 4
+        },
+        {
+            "name" : "Cardiac",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_heart.png",
+            "id" : 5
+        },
+        {
+            "name" :"Pain Relief",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_arthritis.png",
+            "id" : 6
+        },
+        {
+            "name" :"Oral Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/o/r/oral_care_2.png",
+            "id" : 7
+        },
+        {
+            "name" :"Respiratory",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_lungs.png",
+            "id" : 8
+        },
+        {
+            "name" :"Cold & Immunity",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/c/o/cold_and_immunity_21oct.png",
+            "id" : 9
+        },
+        {
+            "name" :"Stomach Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_stomach.png",
+            "id" : 10
+        },
+        {
+            "name" :"Sexual Health",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_condom.png",
+            "id" : 11
+        },
+        {
+            "name" :"Eye and Ear Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_eyeear.png",
+            "id" : 12
+        },
+        {
+            "name" :"Elderly Care",
+            "url":"https://newassets.apollo247.com/pub/media/healtharea/247images/a/d/adult.png",
+            "id" : 13
+    }
+]
+}
