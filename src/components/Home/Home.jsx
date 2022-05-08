@@ -25,7 +25,7 @@ export default function Home() {
                 </p>
                 <div className="ldiv">
                   <div className="ldivs">
-                    <a href="">
+                    <a href="https://www.apollo247.com/specialties">
                       <div className="ldivimg">
                         <img
                           alt=""
@@ -45,7 +45,7 @@ export default function Home() {
                   </div>
 
                   <div className="ldivs">
-                    <a href="">
+                    <a href="https://www.apollopharmacy.in/?_ga=2.95784092.1028415345.1651496790-542201307.1651496790">
                       <div className="ldivimg">
                         <img
                           alt=""

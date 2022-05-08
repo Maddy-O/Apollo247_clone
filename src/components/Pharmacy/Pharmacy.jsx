@@ -64,7 +64,6 @@ const obj = {
     "https://newassets.apollo247.com/pub/media/healtharea/247images/a/d/adult.png",
 };
 
-
 const medName = [
   "COVID Care",
   "COVID Protrction",
@@ -112,8 +111,6 @@ const medObj = {
     "https://newassets.apollo247.com/pub/media/healtharea/247images/a/d/adult.png",
 };
 
-
-
 const Main = styled.div`
   display: flex;
   justify-content: center;
@@ -122,19 +119,19 @@ const Main = styled.div`
   color: red;
 `;
 
-const Second = styled.div`
-  display: flex;
-  gap: 25px;
-`;
+// const Second = styled.div`
+//   display: flex;
+//   gap: 25px;
+// `;
 
 export default function Pharmacy() {
-  const [data, setData] = useState();
-  useEffect(() => {
-    axios.get("http://localhost:8080/healthConditions").then((res) => {
-      setData(res.data);
-      console.log(data);
-    });
-  }, []);
+  //   const [data, setData] = useState();
+  //   useEffect(() => {
+  //     axios.get("http://localhost:8080/healthConditions").then((res) => {
+  //       setData(res.data);
+  //       console.log(data);
+  //     });
+  //   }, []);
 
   return (
     <div
@@ -358,152 +355,9 @@ export default function Pharmacy() {
             </Swiper>
           </div>
         </div>
-        <hr></hr>
         {/* ----------------------------------------------------------- */}
-        <div>
-          <div style={{ display: "flex", gap: "0px" }}>
-            <Swiper
-              // install Swiper modules
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              spaceBetween={50}
-              slidesPerView={3}
-              navigation
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
-            >
-              {Object.keys(obj).map((item, i) => {
-                return (
-                  <div style={{ marginLeft: "50px" }}>
-                    <SwiperSlide
-                      style={{
-                        flexShrink: "1",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          // padding: "5px",
-                          gap: "0px",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <a
-                          href="https://www.apollopharmacy.in/shop-by-health-conditions/respiratory"
-                          style={{
-                            textDecoration: "none",
-                            margin: "0",
-                          }}
-                        >
-                          <div
-                            style={{
-                              margin: "0",
-                              boxSizing: "border-box",
-                              boxShadow: "0 2px 4px 0 gray",
-                              borderRadius: "10px",
-                              padding: "14px 7px",
-                              display: "flex",
-                              // gap: "5px",
-                              alignItems: "center",
-                            }}
-                          >
-                            <img
-                              key={i}
-                              src={obj[item]}
-                              style={{
-                                width: "36px",
-                                aspectRatio: "auto 36 / 36",
-                                height: "36px",
-                                margin: "0",
-                                padding: "0",
-                                boxSizing: "border-box",
-                                marginRight: "12px",
-                              }}
-                              alt=""
-                            ></img>
-                            <p
-                              style={{
-                                margin: "0",
-                                fontWeight: "400",
-                                fontSize: "12px",
-                                fontFamily: "sans-serif",
-                                width: "80px",
-                                justifyContent: "center",
-                                textAlign: "left",
-                              }}
-                            >
-                              {healthConditions[i]}
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                  </div>
-                );
-              })}
-              <br />
-              <br />
-            </Swiper>
-          </div>
-        </div>
-
+        <img src="Untitled.png" style={{ width: "100%" }}></img>
         {/* ---------------------------------------------- */}
-        <div>
-          <div
-            style={{
-              fontSize: "14px",
-              fontFamily: "ibm_plex_sansregular",
-              color: "#02475b",
-              boxSizing: "border-box",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "0 0 10px",
-              margin: "0 0 10px",
-              borderBottom: "1px solid rgba(2,71,91,.2)",
-            }}
-          >
-            <h3
-              style={{
-                color: "#02475b",
-                padding: "0",
-                boxSizing: "border-box",
-                fontWeight: "600",
-                margin: "0",
-                fontSize: "14px",
-                textTransform: "uppercase",
-                fontFamily: "sans-serif",
-                marginLeft: "20px",
-              }}
-            >
-              MUSCLETECH FLAT 35 PERCENT OFF
-            </h3>
-          </div>
-        </div>
-        <br />
-        <div>
-          <Main className="mainContainer">
-            {healthConditions.map((el, i) => (
-              <MedCard key={el._i} imageUrl={el} />
-            ))}
-          </Main>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-        </div>
       </div>
     </div>
   );

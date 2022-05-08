@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,6 +17,12 @@ export default function Login() {
     } else {
       alert("fill the data");
     }
+  };
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/`;
+    navigate(path);
   };
 
   return (
@@ -69,9 +76,15 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" style={{ margin: "10px 0px 15px 10px" }}>
-          Login
-        </button>
+        <a href="/">
+          <button
+            type="submit"
+            onClick={routeChange}
+            style={{ margin: "10px 0px 15px 10px" }}
+          >
+            Login
+          </button>
+        </a>
       </form>
     </div>
   );
