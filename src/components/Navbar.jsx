@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 let liStyle = {
   fontSize: "14px",
@@ -71,7 +73,7 @@ let iTag = {
   textTransform: "none",
   fontSize: "24px",
   lineHeight: "1",
-  webkitFontSmoothing: "antialiased",
+  WebkitFontSmoothing: "antialiased",
   display: "none",
   width: "24px",
   height: "24px",
@@ -79,6 +81,18 @@ let iTag = {
 };
 
 export default function Navbar() {
+  const StyledLink = styled(Link)`
+    ${
+      "" /* border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black !important;
+    background-color: tomato;
+    width: 300px; */
+    }
+  `;
+
   return (
     <div
       style={{
@@ -96,7 +110,7 @@ export default function Navbar() {
       }}
     >
       <div
-        class="Header_container__2upDz"
+        className="Header_container__2upDz"
         style={{
           fontSize: "14px",
           color: "#02475b",
@@ -108,7 +122,7 @@ export default function Navbar() {
         }}
       >
         <div
-          class="Header_headerContent__1YeCK "
+          className="Header_headerContent__1YeCK "
           style={{
             fontSize: "14px",
             color: "#02475b",
@@ -125,7 +139,7 @@ export default function Navbar() {
           }}
         >
           <div
-            class="Header_logoWrapper__vGXQZ"
+            className="Header_logoWrapper__vGXQZ"
             style={{
               fontSize: "14px",
               color: "#02475b",
@@ -139,7 +153,7 @@ export default function Navbar() {
           >
             <h1>
               <a
-                class="Header_logo__2ZGlx"
+                className="Header_logo__2ZGlx"
                 href="/"
                 style={{
                   fontWeight: "400",
@@ -171,7 +185,7 @@ export default function Navbar() {
             </h1>
           </div>
           <div
-            class="Header_menuContainer__1Q0Sd"
+            className="Header_menuContainer__1Q0Sd"
             style={{
               fontSize: "14px",
               color: "#02475b",
@@ -185,7 +199,7 @@ export default function Navbar() {
             }}
           >
             <div
-              class="Header_specialOffer__2MDtQ"
+              className="Header_specialOffer__2MDtQ"
               style={{
                 fontSize: "14px",
                 color: "#02475b",
@@ -196,7 +210,7 @@ export default function Navbar() {
               }}
             ></div>
             <ul
-              class="Navigation_navigationList__2hpDt"
+              className="Navigation_navigationList__2hpDt"
               style={{
                 fontSize: "14px",
                 color: "#02475b",
@@ -244,7 +258,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li style={liStyle}>
-                <a href="/pharmacy" style={aTag}>
+                <StyledLink to={`/pharmacy`} style={aTag}>
                   <i style={iTag}></i>
                   <p style={pTag}>Pharmacy</p>
                   <span style={spanTag}>
@@ -252,7 +266,7 @@ export default function Navbar() {
                     <br />
                     other products
                   </span>
-                </a>
+                </StyledLink>
               </li>
               <li style={liStyle}>
                 <a href="https://apollo247.com/lab-tests" style={aTag}>
@@ -278,7 +292,7 @@ export default function Navbar() {
               </li>
             </ul>
             <div
-              class="Header_cartContainer__ZYDh7"
+              className="Header_cartContainer__ZYDh7"
               style={{
                 fontSize: "14px",
                 fontFamily: "ibm_plex_sansregular",
@@ -295,7 +309,7 @@ export default function Navbar() {
               }}
             >
               <img
-                class="icon-ic_cart"
+                className="icon-ic_cart"
                 style={{
                   color: "#02475b",
                   cursor: "pointer",
@@ -310,14 +324,14 @@ export default function Navbar() {
                   textTransform: "none",
                   fontSize: "24px",
                   lineHeight: "1",
-                  webkitFontSmoothing: "antialiased",
+                  WebkitFontSmoothing: "antialiased",
                   width: "24px",
                   height: "24px",
                 }}
                 src="https://img.icons8.com/material-rounded/344/shopping-cart-loaded.png"
               ></img>
               <span
-                class="Header_badge__8TidP"
+                className="Header_badge__8TidP"
                 style={{
                   cursor: "pointer",
                   margin: "0",
@@ -341,9 +355,9 @@ export default function Navbar() {
                 0
               </span>
             </div>
-            <a
-              href="/login"
-              class="Header_userOptions__1o5ZI"
+            <StyledLink
+              to={`/login`}
+              className="Header_userOptions__1o5ZI"
               style={{
                 fontSize: "14px",
                 fontFamily: "ibm_plex_sansregular",
@@ -354,7 +368,7 @@ export default function Navbar() {
               }}
             >
               <span
-                class="Header_userCircle__3IK1L"
+                className="Header_userCircle__3IK1L"
                 style={{
                   fontSize: "14px",
                   fontFamily: "ibm_plex_sansregular",
@@ -374,7 +388,7 @@ export default function Navbar() {
                 }}
               >
                 <img
-                  class="icon-ic_account_white"
+                  className="icon-ic_account_white"
                   style={{
                     color: "white",
                     textAlign: "center",
@@ -390,14 +404,14 @@ export default function Navbar() {
                     texTransform: "none",
                     fontSize: "24px",
                     lineHeight: "1",
-                    webkitFontSmoothing: "antialiased",
+                    WebkitFontSmoothing: "antialiased",
                     width: "100%",
                     height: "100%",
                   }}
                   src="https://img.icons8.com/external-bearicons-glyph-bearicons/344/external-User-essential-collection-bearicons-glyph-bearicons.png"
                 ></img>
               </span>
-            </a>
+            </StyledLink>
           </div>
         </div>
       </div>

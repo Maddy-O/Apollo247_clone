@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,9 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { MedCard } from "./MedCard";
-import { HealthConditions } from "./HealthCondition";
-import axios from "axios";
 
 let styleAtag = {
   color: "#81a4ae",
@@ -119,20 +116,7 @@ const Main = styled.div`
   color: red;
 `;
 
-// const Second = styled.div`
-//   display: flex;
-//   gap: 25px;
-// `;
-
 export default function Pharmacy() {
-  //   const [data, setData] = useState();
-  //   useEffect(() => {
-  //     axios.get("http://localhost:8080/healthConditions").then((res) => {
-  //       setData(res.data);
-  //       console.log(data);
-  //     });
-  //   }, []);
-
   return (
     <div
       style={{

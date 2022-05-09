@@ -21,7 +21,6 @@ export const MedCard = ({ id, imageUrl, title, price }) => {
         <div>
           <h2 className="title">{title}</h2>
         </div>
-        {/* <h4 className="price">{imageUrl}</h4> */}
       </div>
     </StyledLink>
   );

@@ -11,14 +11,14 @@ export default function Home() {
             <div className="onecontent">
               <div className="oneimg">
                 <img
-                  class="img1"
+                  className="img1"
                   src="https://newassets.apollo247.com/images/img-doctors@1x.jpg"
                   alt="Online Doctor Consultation &amp; Medicines"
                 />
               </div>
 
               <div className="leftone">
-                <span class="lspan1">hello there!</span>
+                <span className="lspan1">hello there!</span>
                 <p>
                   {" "}
                   Always caring about your health, we are here to help you!
